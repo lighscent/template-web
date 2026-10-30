@@ -1,0 +1,16 @@
+<%- include('./head') %>
+<header class="bg-bg-secondary border-b border-border sticky top-0 z-30">
+  <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+    <a href="/" class="text-base font-bold tracking-tight text-text no-underline"><%= siteName %></a>
+    <button id="menu-btn" class="md:hidden w-8 h-8 rounded-md text-text-dim hover:text-text hover:bg-bg-hover transition cursor-pointer" aria-label="Menu">&#9776;</button>
+    <nav id="nav-menu" class="hidden md:flex md:items-center md:gap-1 text-sm max-md:absolute max-md:top-14 max-md:left-0 max-md:right-0 max-md:bg-bg-secondary max-md:border-b max-md:border-border max-md:p-2 max-md:space-y-1 max-md:shadow-xl">
+      <% navLinks.forEach(function(link) { %>
+        <a href="<%= link.to %>" <%- path === link.to ? 'aria-current="page"' : '' %> class="px-3 py-2 rounded-md no-underline transition text-text-dim hover:text-text hover:bg-bg-hover">
+          <%= link.label %>
+        </a>
+      <% }) %>
+    </nav>
+  </div>
+</header>
+
+<main class="flex-1">

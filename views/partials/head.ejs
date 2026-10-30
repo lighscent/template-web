@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title ? title + ' - ' + siteName : siteName %></title>
+  <meta name="description" content="<%= description %>" />
+  <% if (noindex) { %><meta name="robots" content="noindex, nofollow" /><% } %>
+  <link rel="icon" href="data:," />
+  <link rel="canonical" href="<%= siteUrl %><%= path %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="<%= siteName %>" />
+  <meta property="og:title" content="<%= title ? title + ' - ' + siteName : siteName %>" />
+  <meta property="og:description" content="<%= description %>" />
+  <meta property="og:url" content="<%= siteUrl %><%= path %>" />
+  <% if (ogImage) { %><meta property="og:image" content="<%= siteUrl %><%= ogImage %>" /><% } %>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/output.css?v=<%= assetVersion %>" />
+</head>
+<body class="bg-bg-primary text-text min-h-dvh flex flex-col">

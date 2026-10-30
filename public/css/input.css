@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyan: #9d8cf8;
+  --color-cyan-dark: #7c6ae0;
+  --color-stone: #8d8b9c;
+  --color-stone-light: #d2d0de;
+  --color-gold: #e0b04a;
+  --color-green: #4ad36a;
+  --color-green-bg: #7c5cf0;
+  --color-purple: #b98ff8;
+  --color-red: #f47171;
+  --color-text: #ecebf1;
+  --color-text-dim: #8d8b9c;
+  --color-border: #26262f;
+  --color-border-soft: #1c1c24;
+  --color-bg-primary: #0a0a0f;
+  --color-bg-secondary: #13131a;
+  --color-bg-card: #13131a;
+  --color-bg-hover: #1a1a24;
+}
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* Firefox: ignores ::-webkit-scrollbar below */
+  scrollbar-color: var(--color-border) var(--color-bg-primary); /* thumb track */
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-stone);
+}
+
+#nav-menu a[aria-current="page"] {
+  color: var(--color-text);
+  background: var(--color-bg-hover);
+}
+
+.gh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.375rem 0.875rem;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  cursor: pointer;
+}
+.gh-btn:active {
+  transform: translateY(1px);
+}
+.gh-btn-primary {
+  background: linear-gradient(135deg, var(--color-green-bg), #5a3fd6);
+  color: #fff;
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  box-shadow: 0 1px 10px rgba(124, 92, 240, 0.25);
+}
+.gh-btn-primary:hover {
+  filter: brightness(1.12);
+}
+.gh-btn-secondary {
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+.gh-btn-secondary:hover {
+  border-color: var(--color-stone);
+}

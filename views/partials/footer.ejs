@@ -1,0 +1,16 @@
+</main>
+
+<footer class="border-t border-border py-6">
+  <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6">
+    <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-text-dim">
+      <% navLinks.forEach(function(link) { %>
+        <a href="<%= link.to %>" class="hover:text-text transition no-underline"><%= link.label %></a>
+      <% }) %>
+    </div>
+    <p class="text-center text-xs text-text-dim mt-3">&copy; <%= year %> <%= siteName %></p>
+  </div>
+</footer>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>
